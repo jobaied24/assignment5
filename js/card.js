@@ -55,3 +55,12 @@ document.getElementById('history-btn').addEventListener('click',function(event){
         div.remove();
     })
 })
+
+
+
+
+// discover section
+document.getElementById('discover').addEventListener('click',function(event){
+    event.preventDefault();
+    window.location.href='./discover.html';
+})
