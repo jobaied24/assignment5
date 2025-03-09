@@ -107,7 +107,7 @@ document.getElementById('discover').addEventListener('click',function(event){
 
     return currentDate.toLocaleDateString('en-US',convertedDate);
    }
-   console.log(newDate())
+
 
    
    const dateSection =document.getElementById('date').innerText=newDate(
