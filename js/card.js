@@ -7,6 +7,9 @@ let convertedCheckbox = parseInt(checkbox);
 
 const history=document.getElementById('historySection');
 
+let completeTask=0;
+let totalTask = 6;
+
 
 function clickById(id){
 document.getElementById(id).addEventListener('click',function(event){
@@ -33,6 +36,15 @@ document.getElementById(id).addEventListener('click',function(event){
    <h1>You have completed the task</h1> ${cardTitle} at ${date}
    `
    history.appendChild(div);
+
+
+
+//    completing alert
+     completeTask++;
+     if(completeTask==totalTask){
+        alert('Congrates!! You have completed all the current task');
+     }
+    
 })
 }
 
@@ -47,7 +59,7 @@ document.getElementById(id).addEventListener('click',function(event){
 
 
 
-// clear history
+// clear hissk))tory
 document.getElementById('history-btn').addEventListener('click',function(event){
     event.preventDefault();
     const dltHistory=document.querySelectorAll('.history-entires');
@@ -81,3 +93,29 @@ document.getElementById('discover').addEventListener('click',function(event){
           const bgColor=  getColorByClick();
         document.body.style.backgroundColor=bgColor;
       })
+
+
+    //   date section
+   function newDate(){
+    const currentDate = new Date();
+    const convertedDate = {
+        weekday:'short',
+        month:'short',
+        day:'numeric',
+        year:'numeric'
+    };
+
+    return currentDate.toLocaleDateString('en-US',convertedDate);
+   }
+   console.log(newDate())
+
+   
+   const dateSection =document.getElementById('date').innerText=newDate(
+
+   );
+
+
+
+
+// completing alert
+
