@@ -64,3 +64,20 @@ document.getElementById('discover').addEventListener('click',function(event){
     event.preventDefault();
     window.location.href='./discover.html';
 })
+
+
+// theme Change
+  function getColorByClick(){
+        const r = Math.floor(Math.random()*256);
+        const g = Math.floor(Math.random()*256);
+        const b = Math.floor(Math.random()* 256);
+
+        const color= `rgb(${r}, ${g}, ${b})`;
+        return color;
+          
+      }
+
+      document.getElementById('theme').addEventListener('click',function(){
+          const bgColor=  getColorByClick();
+        document.body.style.backgroundColor=bgColor;
+      })
